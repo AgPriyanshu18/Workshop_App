@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:background="@drawable/shape_image_view_border">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/wkName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WkName"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/wkDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/wkDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desc"
+            android:layout_margin="5dp"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/wkFees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fees"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/applyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:background="#3D56E1"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
