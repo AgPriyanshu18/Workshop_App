@@ -48,7 +48,8 @@ class DatabaseHelper(context: Context) :
 
         val CREATE_USER_WORKSHOP_TABLE = ("CREATE TABLE " + TABLE_USER_WORKSHOPS + " ( "
                 + KEY_EMAIL + " TEXT, "
-                + KEY_WORKSHOP_ID + " INT);")
+                + KEY_WORKSHOP_ID + " INT," +
+                "CONSTRAINT ATTWORK PRIMARY KEY ("+KEY_EMAIL+","+KEY_WORKSHOP_ID+"));")
 
         db?.execSQL(CREATE_USER_TABLE)
         db?.execSQL(CREATE_WORKSHOP_TABLE)
