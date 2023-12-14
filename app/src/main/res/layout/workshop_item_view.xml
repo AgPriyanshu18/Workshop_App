@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_margin="5dp"
-    android:background="@drawable/shape_image_view_border">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="16dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_image_view_border">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -18,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="WkName"
             android:layout_margin="5dp"
-            android:textSize="15sp"/>
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/wkDate"
@@ -26,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Date"
             android:layout_margin="5dp"
-            android:textSize="15sp"/>
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/wkDesc"
@@ -34,7 +41,7 @@
             android:layout_height="wrap_content"
             android:text="Desc"
             android:layout_margin="5dp"
-            android:textSize="15sp"/>
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
@@ -51,7 +58,7 @@
             android:layout_height="wrap_content"
             android:text="Fees"
             android:layout_margin="5dp"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:layout_gravity="center"/>
 
         <Button
@@ -64,5 +71,6 @@
             android:layout_marginTop="10dp"/>
 
     </LinearLayout>
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

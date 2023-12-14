@@ -16,30 +16,36 @@
             android:layout_weight="8"
             android:layout_height="wrap_content"
             android:text="Welcome"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
             android:layout_margin="20dp"
-            android:textSize="20sp"/>
+            android:textSize="24sp"/>
         <TextView
             android:id="@+id/logOut"
             android:layout_width="0dp"
             android:layout_weight="3"
             android:layout_height="wrap_content"
             android:text="LogOut"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
             android:layout_margin="20dp"
-            android:textSize="20sp"/>
+            android:textSize="24sp"/>
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/userDashboardRV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/exploreBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
+        android:backgroundTint="#3A58EC"
         android:text="Explore More Workshops"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userDashboardRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:listitem="@layout/workshop_item_view"/>
 
 </LinearLayout>
