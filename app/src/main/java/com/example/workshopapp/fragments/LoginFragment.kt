@@ -14,7 +14,7 @@ import com.example.workshopapp.R
 import com.example.workshopapp.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-    var binding : FragmentLoginBinding ?= null
+    private var binding : FragmentLoginBinding ?= null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,11 +46,11 @@ class LoginFragment : Fragment() {
         return binding?.root!!
     }
 
-    fun checkLogin(fragManager : FragmentManager){
+    private fun checkLogin(fragManager : FragmentManager){
         val email = binding?.etEmail?.text.toString()
         val password = binding?.etPassword?.text.toString()
 
-        if(email.isNullOrEmpty() || password.isNullOrEmpty()){
+        if(email.isEmpty() || password.isEmpty()){
             Toast.makeText(requireContext(),"Fields cannot be empty",
                 Toast.LENGTH_SHORT).show()
             return

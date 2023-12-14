@@ -14,7 +14,7 @@ import com.example.workshopapp.databinding.FragmentUserDashboardBinding
 import com.example.workshopapp.models.workshop
 
 class UserDashboard : Fragment() {
-   var binding : FragmentUserDashboardBinding ?= null
+   private var binding : FragmentUserDashboardBinding ?= null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,15 +53,15 @@ class UserDashboard : Fragment() {
         val db = DatabaseHelper(requireContext())
         val wkUserList = db.getWkListPfUser(email!!)
         val wkList = db.getWkList()
-        val UserWorkshopList : ArrayList<workshop> = ArrayList()
+        val userWorkshopList : ArrayList<workshop> = ArrayList()
         for (workshop in wkList){
             for (id in wkUserList){
                 if (id == workshop.workshopId){
-                    UserWorkshopList.add(workshop)
+                    userWorkshopList.add(workshop)
                 }
             }
         }
-        val adapter = workshopListAdapter(UserWorkshopList , true)
+        val adapter = workshopListAdapter(userWorkshopList , true)
         binding?.userDashboardRV?.adapter = adapter
         binding?.userDashboardRV?.layoutManager = LinearLayoutManager(requireContext())
     }

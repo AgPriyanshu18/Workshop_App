@@ -12,11 +12,10 @@ import com.example.workshopapp.Adapter.workshopListAdapter
 import com.example.workshopapp.Database.DatabaseHelper
 import com.example.workshopapp.R
 import com.example.workshopapp.databinding.FragmentWorkshopsListBinding
-import com.example.workshopapp.models.attended
 import com.example.workshopapp.models.workshop
 
 class WorkshopsListFragment : Fragment() {
-    var binding : FragmentWorkshopsListBinding ?= null
+    private var binding : FragmentWorkshopsListBinding ?= null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,7 +42,7 @@ class WorkshopsListFragment : Fragment() {
         return binding?.root
     }
 
-    fun setupRV(){
+    private fun setupRV(){
         val db = DatabaseHelper(requireContext())
 
         val wkList = db.getWkList()
@@ -55,9 +54,6 @@ class WorkshopsListFragment : Fragment() {
                 val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
                 val highScore = sharedPref.getBoolean( getString(R.string.userlogined), false)
                 if (highScore){
-                    val db = DatabaseHelper(requireContext())
-                    val email = sharedPref.getString(getString(R.string.useremail),"")
-                    val result = db.addWorkshopUser(attended(email!!, workshop.workshopId))
                     parentFragmentManager.popBackStack()
                     Toast.makeText(requireContext(),
                     "You are attending ${workshop.workshopName}",
